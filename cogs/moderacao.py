@@ -43,7 +43,7 @@ class Mod(commands.Cog):
     @commands.command()
     @commands.has_permissions(ban_members=True)
     async def ban(self, ctx, member: commands.MemberConverter, *, reason=None):
-        """Bane um membro do servidor (com confirmação)"""
+        """Ban"""
         try:
             view = ConfirmBanView(ctx, member, reason)
             msg = await ctx.send(
