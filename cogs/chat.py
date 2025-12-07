@@ -25,11 +25,10 @@ class Chat(commands.Cog):
         """nuke"""
         channel = ctx.channel
         new_channel = await channel.clone(reason=f"nukado por {ctx.author}")
+        await channel.delete()
         embed = discord.Embed(title="💥💥💥", color=discord.Color.red())
         embed.set_image(url="https://media.giphy.com/media/oe33xf3B50fsc/giphy.gif")
         await new_channel.send(embed=embed)
-        
-        await channel.delete()
 
 async def setup(bot):
 
