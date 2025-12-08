@@ -21,5 +21,6 @@ async def main():
         await bot.load_extension("cogs.chat")
         await bot.load_extension("cogs.moderacao")
         await bot.start(TOKEN)
-    
+
+        
 asyncio.run(main())

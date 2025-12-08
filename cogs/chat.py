@@ -31,5 +31,4 @@ class Chat(commands.Cog):
         await new_channel.send(embed=embed)
 
 async def setup(bot):
-
     await bot.add_cog(Chat(bot))

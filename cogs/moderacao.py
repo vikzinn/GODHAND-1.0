@@ -71,6 +71,12 @@ class Mod(commands.Cog):
         except Exception as e:
             await ctx.send(f"❌ Não consegui desbanir: {e}")
 
+    @commands.is_owner()
+    @commands.command(name="say")
+    async def say(self, ctx, *, texto):
+        """say"""
+        await ctx.message.delete()
+        await ctx.channel.send(texto, allowed_mentions=discord.AllowedMentions.all())
 
 async def setup(bot):
     await bot.add_cog(Mod(bot))
